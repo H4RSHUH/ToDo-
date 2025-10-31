@@ -2,7 +2,7 @@ const express= require('express');
 const app = express();
 const cors = require('cors');
 app.use(cors({
-  origin: ["https://to-emgo14f03-harshs-projects-ecb21bf9.vercel.app"],
+origin: "https://to-emgo14f03-harshs-projects-ecb21bf9.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
