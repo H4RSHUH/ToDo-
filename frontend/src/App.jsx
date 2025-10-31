@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://todo-backend.onrender.com/api")
+      .get("https://todo-nmoc.onrender.com/api")
       .then((res) => {
         setTodo(res.data);
       })
@@ -19,7 +19,7 @@ function App() {
 
   const addTodo = async () => {
     try {
-      const response = await axios.post("https://todo-backend.onrender.com/api", {
+      const response = await axios.post("https://todo-nmoc.onrender.com/api", {
         title,
       });
       setTodo((prev) => [...prev, response.data]);
@@ -30,7 +30,7 @@ function App() {
   };
   const toggleTodo = async (id, currentStatus) => {
     try {
-      await axios.put(`https://todo-backend.onrender.com/api/${id}`, {
+      await axios.put(`https://todo-nmoc.onrender.com/api/${id}`, {
         completed: !currentStatus,
       });
       setTodo((prev) =>
@@ -45,7 +45,7 @@ function App() {
 
   async function deleteTodo(id) {
     try {
-      await axios.delete(`https://todo-backend.onrender.com/api/${id}`);
+      await axios.delete(`https://todo-nmoc.onrender.com/api/${id}`);
       setTodo((prev) => prev.filter((todo) => todo._id !== id));
     } catch (error) {
       console.error("Error deleting todo:", error);
