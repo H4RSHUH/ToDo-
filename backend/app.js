@@ -16,5 +16,10 @@ app.get('/api/test', (req, res) => {
     res.send('Hello World!');
 });
 
+app.get('/', (req, res) => {
+  res.send('✅ Todo backend is running fine!');
+});
+
+
 
 module.exports= app;
